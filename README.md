@@ -12,11 +12,13 @@ All you need is the latest linux version of a linux with fallocate and dd or els
  npm install 
  sudo node index.js
 
- ## With yarn 
+## With yarn 
  git clone https://github.com/theoundation/secretdrive.git
  cd secretdrive
  yarn install 
  sudo node index.js
 
- ## Make sure you use sudo or else you'll get a error
+## Make sure you use sudo or else you'll get a error
 ```
+### In the future
+In the future, there will be a script with options for apps to use

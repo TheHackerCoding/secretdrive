@@ -33,6 +33,7 @@ function main() {
               shell.exit(1)
           } else {
               type.checkMessage("Adding space to drive file completed...")
+              shell.exit(1)
           }
       }
 }
