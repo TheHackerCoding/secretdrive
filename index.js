@@ -1,7 +1,4 @@
-const { type } = require("./lib");
 var shell = require("shelljs")
-const readline = require('readline');
-const isRoot = require('is-root');
 
 const createDrive = function (filename, size, error){
     if (shell.exec(`fallocate -l ${size} ${filename}`).code !== 0) {
