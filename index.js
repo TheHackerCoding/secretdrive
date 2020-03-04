@@ -3,37 +3,44 @@ var shell = require("shelljs")
 const readline = require('readline');
 const isRoot = require('is-root');
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-if (!isRoot()){
-    type.errorMessage("Sorry, but you're not in sudo mode. Please try again in sudo mode.")
-    shell.exit(1)
-}
-if(!shell.which("fallocate")) {
-    type.errorMessage("Sorry, but this script requires fallocate")
-    shell.exit(1)
-} else {
-    type.infoMessage("You have the proper tools to run this...")
-    main()
-}
-
-function main() {
-    type.taskMessage("Creating intial drive file...")
-    if (shell.exec('fallocate -l 1000M MyDrive.img').code !== 0) {
-        type.errorMessage("Inital drive file failed...");
-        shell.exit(1);
+const createDrive = function (filename, size, error){
+    if (shell.exec(`fallocate -l ${size} ${filename}`).code !== 0) {
+        error="Error: creating drive file"
       } else {
-          type.checkMessage("Initial drive file created...")
-          type.taskMessage("Adding space to drive file...")
-          if(shell.exec("dd if=/dev/zero of=MyDrive.img bs=1M count=1000").code !==0) {
-              type.errorMessage("Adding space to drive file failed...")
-              shell.exit(1)
+          if(shell.exec(`dd if=/dev/zero of=${filename} bs=1M count=${size}`).code !==0) {
+            error="Error: adding space to drive file"
           } else {
-              type.checkMessage("Adding space to drive file completed...")
-              shell.exit(1)
+              if(shell.exec(`mkfs -t ext3 ${filename}`).code !==0){
+                error="Error: formating and mounting drive file"
+              }
+            return true
           }
       }
 }
+
+const openDrive = function (filename, location, error){
+    if(shell.exec(`sudo mkdir ${location}`).code !==0) {
+        error="Error: making drive direction"
+    } else {
+        if(shell.exec(`sudo mount -t auto -o loop ${filename} ${location}`) !==0) {
+            error="Error: mounting drive"
+        }
+    }
+}
+
+const unmountDrive = function (location, error) {
+    if(shell.exec(`sudo umount ${location}`).code !==0) {
+        error="Error: unmounting drive"
+    }
+}
+
+const createopenDrive = function (filename, location, size, error) {
+    createDrive(filename,size,error)
+    openDrive(filename,location,error)
+
+}
+exports.createDrive = createDrive
+exports.openDrive = openDrive
+exports.openDrive = mountDrive
+exports.unmountDrive = unmountDrive
+exports.createopenDrive = createopenDrive
