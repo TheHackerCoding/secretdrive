@@ -25,7 +25,7 @@ All you need is the latest Linux version of a Linux with fallocate and dd or els
 ```sh
 npm install @thehackercoding/secretdrive 
 ```
-For a guide to install this package from GitHub Packages, [click here]("https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#installing-a-package")
+For a guide to install this package from GitHub Packages, [click here](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#installing-a-package "Guide for installing GitHub Packages")
 
 
 ### Examples
