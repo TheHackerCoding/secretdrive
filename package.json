@@ -8,6 +8,9 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "license": "MIT",
+  "scripts" : {
+    "test" : "node index.js"
+  },
   "dependencies": {
     "is-root": "^2.1.0",
     "shelljs": "^0.8.3",

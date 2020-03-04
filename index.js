@@ -38,6 +38,6 @@ const createopenDrive = function (filename, location, size, error) {
 }
 exports.createDrive = createDrive
 exports.openDrive = openDrive
-exports.openDrive = mountDrive
+exports.mountDrive = openDrive
 exports.unmountDrive = unmountDrive
 exports.createopenDrive = createopenDrive
