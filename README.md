@@ -1,4 +1,4 @@
-# Secret Drive
+# Secret Drive [![Build Status](https://travis-ci.com/TheHackerCoding/secretdrive.svg?branch=master)](https://travis-ci.com/TheHackerCoding/secretdrive)
 A Linux script made in Node.js to make and mount virtual drives from files
 
 ### Requirements
