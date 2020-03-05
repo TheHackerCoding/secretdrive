@@ -1,4 +1,4 @@
-# Secret Drive [![Build Status](https://travis-ci.com/TheHackerCoding/secretdrive.svg?branch=master)](https://travis-ci.com/TheHackerCoding/secretdrive)
+# Secret Drive [![Build Status](https://travis-ci.com/TheHackerCoding/secretdrive.svg?branch=master)](https://travis-ci.com/TheHackerCoding/secretdrive) [![CircleCI](https://circleci.com/gh/TheHackerCoding/secretdrive/tree/circleci-project-setup.svg?style=svg)](https://circleci.com/gh/TheHackerCoding/secretdrive/tree/circleci-project-setup)
 A Linux script made in Node.js to make and mount virtual drives from files
 
 ### Requirements
