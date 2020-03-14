@@ -1,4 +1,8 @@
-# Secret Drive [![Build Status](https://travis-ci.com/TheHackerCoding/secretdrive.svg?branch=master)](https://travis-ci.com/TheHackerCoding/secretdrive) [![CircleCI](https://circleci.com/gh/TheHackerCoding/secretdrive/tree/circleci-project-setup.svg?style=svg)](https://circleci.com/gh/TheHackerCoding/secretdrive/tree/circleci-project-setup)
+# Secret Drive 
+# [![Build Status](https://travis-ci.com/TheHackerCoding/secretdrive.svg?branch=master)](https://travis-ci.com/TheHackerCoding/secretdrive) [![CircleCI](https://circleci.com/gh/TheHackerCoding/secretdrive/tree/circleci-project-setup.svg?style=svg)](https://circleci.com/gh/TheHackerCoding/secretdrive/tree/circleci-project-setup) [![Build status](https://ci.appveyor.com/api/projects/status/316ih1p8mmp1u0ha/branch/master?svg=true)](https://ci.appveyor.com/project/TheHackerCoding/secretdrive/branch/master) [![codecov](https://codecov.io/gh/TheHackerCoding/secretdrive/branch/master/graph/badge.svg)](https://codecov.io/gh/TheHackerCoding/secretdrive)
+
+
+
 A Linux script made in Node.js to make and mount virtual drives from files
 
 ### Requirements
